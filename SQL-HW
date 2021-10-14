@@ -1,0 +1,106 @@
+--List all customers who live in Texas (use
+--JOINs)
+
+SELECT first_name,last_name, address, district 
+FROM customer
+JOIN address ON customer.address_id = address.address_id
+WHERE address.district ='Texas';
+
+--answer : 5 customers live in texas
+
+--Get all payments above $6.99 with the Customer's Full
+--Name
+
+SELECT first_name,last_name,payment_id, amount
+FROM customer
+JOIN payment ON customer.customer_id = payment.customer_id
+WHERE payment.amount > 6.99 
+
+
+--answer: 1406 payments
+
+--Show all customers names who have made at least 4 payments(use
+--subqueries)
+--SELECT customer_id,first_name,last_name
+--FROM customer
+--WHERE payment IN(
+--	SELECT payment_id
+--	FROM payment
+
+--confused
+
+
+
+
+
+
+
+--List all customers that live in Nepal (use the city
+--table)
+
+--SELECT customer_id, first_name, last_name, country
+--FROM customer
+--JOIN country on customer.last_update = country.last_update
+--WHERE country = 'Nepal'
+
+-- confused
+
+
+
+
+
+
+
+
+--Which staff member (first/last name) had the most
+--transactions?
+--SELECT first_name, last_name, payment_id
+--FROM STAFF
+--JOIN payment ON staff.staff_id = payment.payment_id
+
+
+
+
+
+
+
+
+--Which movie title(s) has been rented the most?
+SELECT *
+FROM film
+
+
+
+
+
+
+--Show all customers who have made a single payment
+--above $6.99 (Use Subqueries)
+
+
+
+
+
+
+
+
+-- which employee gave out the most free rentals?
+SELECT staff_id, amount
+FROM payment
+WHERE amount = 0;
+
+--Answer: employee-1, 15 rentals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
